@@ -2,9 +2,12 @@ import SwiftUI
 
 @main
 struct MyApp: App {
+    
+    @State var Form = Information()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(Form: $Form)
         }
     }
 }
