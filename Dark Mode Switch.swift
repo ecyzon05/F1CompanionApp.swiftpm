@@ -1,8 +1,13 @@
-//
-//  Dark Mode Switch.swift
-//  F1CompanionApp
-//
-//  Created by Kacper Lechowicz on 4/23/24.
-//
 
-import Foundation
+import SwiftUI
+
+struct DarkModeSwitch: View {
+    @AppStorage("isDarkMode") var isDarkMode = false
+    var body: some View {
+            Button(action: {
+                isDarkMode.toggle()
+            }, label: {
+                Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle") .imageScale(.large)
+            })
+        }
+    }
