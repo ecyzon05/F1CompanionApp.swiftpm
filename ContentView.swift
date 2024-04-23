@@ -4,6 +4,7 @@ struct ContentView: View {
     @Binding var Form: Information
     
     var body: some View {
+        DarkModeSwitch()
         NavigationStack{
             VStack{
                 HStack{
