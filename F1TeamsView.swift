@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct F1TeamsView: View {
+    
+    @Binding var Form: Information
+    
     var body: some View {
         HStack(spacing: 5) {
             VStack(spacing: 5) {
@@ -51,7 +54,7 @@ struct F1TeamsView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 400, height: 250)
-            }
+                }
                 Button(action: {
                 }) {
                     Image("HaasF1")
@@ -79,6 +82,16 @@ struct F1TeamsView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 300, height: 100)
+                    
+                    NavigationStack{
+                        VStack{
+                            NavigationLink("Back to home page") {
+                                
+                                ContentView(Form: $Form)
+                                
+                            }
+                        }
+                    }
                 }
             }
         }
