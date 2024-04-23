@@ -1,11 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @Binding var Form: Information
     
     var body: some View {
-        
         NavigationStack{
             VStack{
                 NavigationLink("F1 Teams") {
