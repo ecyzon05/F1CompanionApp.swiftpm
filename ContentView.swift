@@ -8,19 +8,26 @@ struct ContentView: View {
         
         NavigationStack{
             VStack{
-                NavigationLink("F1 Teams") {
-                    
-                    F1TeamsView(Form: $Form)
+                HStack{
+                    NavigationLink("F1 Teams") {
+                        
+                        F1TeamsView(Form: $Form)
+                    }
+                    Image("Racer")
                 }
-                
-                NavigationLink("Racetracks") {
-                    
-                    RacetrackView(Form: $Form)
+                HStack{
+                    NavigationLink("Racetracks") {
+                        
+                        RacetrackView(Form: $Form)
+                    }
+                    Image("Race.Track")
                 }
-                
-                NavigationLink("Championships Standings") {
-                    
-                    ChampionshipStandingsView(Form: $Form)
+                HStack{
+                    NavigationLink("Championships Standings") {
+                        
+                        ChampionshipStandingsView(Form: $Form)
+                    }
+                    Image("Standing")
                 }
             }
             
