@@ -1,28 +1,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Binding var Form: Information
+    
     var body: some View {
         
-        
-        VStack{
-            Button("F1 Teams") {
+        NavigationStack{
+            VStack{
+                NavigationLink("F1 Teams") {
+                    
+                    F1TeamsView(Form: $Form)
+                }
                 
-                print("Make this go to the teams tab")
-            }
-            
-            Button ("Racetracks") {
+                NavigationLink("Racetracks") {
+                    
+                    RacetrackView(Form: $Form)
+                }
                 
-                print("Make this go to the racetracks tab")
+                NavigationLink("Championships Standings") {
+                    
+                    ChampionshipStandingsView(Form: $Form)
+                }
             }
-            
-            Button("Championships Standings") {
-                
-                print ("make this got the championships standings tab")
-            }
-            
-            
-            
-            
             
         }
     }
