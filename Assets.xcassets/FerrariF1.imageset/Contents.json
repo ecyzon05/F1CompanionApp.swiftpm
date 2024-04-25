@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "kisspng-scuderia-ferrari-ferrari-s-p-a-car-5b88d55f0e4c93.8198830515356941750586.jpeg",
-      "idiom" : "universal"
+      "filename" : "2ee40748b46b2be8221957b564558eb2.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
