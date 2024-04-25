@@ -17,14 +17,14 @@ struct ContentView: View {
                 HStack{
                     NavigationLink("Racetracks") {
                         
-                        RacetrackView(Form: $Form)
+                        TrackView(Form: $Form)
                     }
                     Image("Race.Track")
                 }
                 HStack{
                     NavigationLink("Championships Standings") {
                         
-                        ChampionshipStandingsView(Form: $Form)
+                        StandingsView(Form: $Form)
                     }
                     Image("Standing")
                 }

@@ -1,11 +1,18 @@
+//
+//  Austria.swift
+//  F1CompanionApp
+//
+//  Created by Ryder De La Cruz on 4/25/24.
+//
+
 import SwiftUI
 
-struct ChampionshipStandingsView: View {
+struct AustriaView: View {
     
     @Binding var Form: Information
     
     var body: some View {
-         NavigationStack{
+        NavigationStack{
             VStack{
                 NavigationLink("Back to home page") {
         
