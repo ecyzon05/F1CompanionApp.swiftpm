@@ -1,8 +1,18 @@
-//
-//  RedBullView.swift
-//  F1CompanionApp
-//
-//  Created by Ethan Cyzon on 4/25/24.
-//
 
-import Foundation
+import SwiftUI
+
+struct RedBullView: View {
+   
+
+    @Binding var Form: Information
+    
+    var body: some View {
+            VStack{
+                NavigationLink("Go to RedBull's Team!") {
+                    
+                    ContentView(Form: $Form)
+                }
+            }
+    }
+    
+}
