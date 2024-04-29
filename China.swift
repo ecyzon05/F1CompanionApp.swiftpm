@@ -1,8 +1,6 @@
-
-
 import SwiftUI
 
-struct AustriaView: View {
+struct ChinaView: View {
     
     @Binding var Form: Information
     
@@ -10,7 +8,7 @@ struct AustriaView: View {
         NavigationStack{
             VStack{
                 NavigationLink("Back to home page") {
-        
+                    
                     ContentView(Form: $Form)
                 }
             }
