@@ -99,20 +99,10 @@ struct F1TeamsView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 300, height: 100)
-                    
-                    NavigationStack{
-                        VStack{
-                            NavigationLink("Back to home page") {
-                                
-                                ContentView(Form: $Form)
-                                
-                            }
-                        }
                     }
                 }
             }
         }
     }
-}
 
 
