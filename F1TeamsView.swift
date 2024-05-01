@@ -9,6 +9,23 @@ struct F1TeamsView: View {
    
 >>>>>>> Stashed changes
     var body: some View {
+        Spacer()
+            .navigationBarBackButtonHidden(true)
+            .toolbar(content: {
+                ToolbarItem (placement: .navigationBarLeading) {
+                    
+                    Button(action: {
+                        presentationMode
+                            .wrappedValue
+                            .dismiss()
+                    }, label: {
+                        Image(systemName: "house")
+                            .foregroundColor(.blue)
+                        Text("Home")
+                            .foregroundColor(.blue)
+                    })
+                }
+            })
         HStack(spacing: 5) {
             VStack(spacing: 5) {
                 Button(action: {
@@ -191,4 +208,5 @@ struct F1TeamsView: View {
         }
     }
 }
+
 
