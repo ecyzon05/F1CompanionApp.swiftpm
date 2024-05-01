@@ -24,7 +24,7 @@ struct ContentView: View {
                 HStack{
                     NavigationLink("Championships Standings") {
                         
-                        StandingsView(Form: $Form)
+                        ChampionshipStandingsView(Form: $Form)
                     }
                     Image("Standing")
                 }
