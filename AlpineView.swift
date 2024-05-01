@@ -4,6 +4,7 @@ import SwiftUI
 struct AlpineView: View {
    
 
+
     @Binding var Form: Information
     
     var body: some View {

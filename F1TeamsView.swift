@@ -1,210 +1,61 @@
 import SwiftUI
 
+struct TeamData {
+    var info: String
+}
+
 struct F1TeamsView: View {
     
-    @Binding var Form: Information
-<<<<<<< Updated upstream
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-=======
-   
->>>>>>> Stashed changes
+    @State private var mercedesData = TeamData(info: "Mercedes Info")
+    @State private var isMercedesViewActive = false
+    @State private var ferrariData = TeamData(info: "Ferrari Info")
+    @State private var isFerrariViewActive = false
+    @State private var redBullData = TeamData(info: "Red Bull Info")
+    @State private var isRedBullViewActive = false
+    
     var body: some View {
-        Spacer()
-            .navigationBarBackButtonHidden(true)
-            .toolbar(content: {
-                ToolbarItem (placement: .navigationBarLeading) {
-                    
-                    Button(action: {
-                        presentationMode
-                            .wrappedValue
-                            .dismiss()
-                    }, label: {
-                        Image(systemName: "house")
-                            .foregroundColor(.blue)
-                        Text("Home")
-                            .foregroundColor(.blue)
+        NavigationView {
+            VStack {
+                NavigationLink(
+                    destination: MercedesView(teamData: mercedesData)
+                    isActive: $isMercedesViewActive,
+                    label: {
+                        Image("MercedesAMGF1")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 160)
+                            .onTapGesture {
+                                isMercedesViewActive = true
+                            }
                     })
-                }
-            })
-        HStack(spacing: 5) {
-            VStack(spacing: 5) {
-                Button(action: {
-                   
-                }) {
-                    Image("MercedesAMGF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 150)
-                }
                 
                 NavigationLink(
-                    destination: MercedesView(Form: $Form),
-                   
-                ) {
-                    EmptyView()
-                }
+                    destination: FerrariView(teamData: ferrariData),
+                    isActive: $isFerrariViewActive,
+                    label: {
+                        Image("FerrariF1")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 160)
+                            .onTapGesture {
+                                isFerrariViewActive = true
+                            }
+                    })
+                
+                NavigationLink(
+                    destination: RedBullView(teamData: redBullData),
+                    isActive: $isRedBullViewActive,
+                    label: {
+                        Image("RedBullF1")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 160)
+                            .onTapGesture {
+                                isRedBullViewActive = true
+                            }
+                    })
             }
-            
-            VStack {
-                Button(action: {
-                   
-                }) {
-                    Image("FerrariF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 200)
-                }
-                
-                NavigationLink(
-                    destination: FerrariView(Form: $Form),
-                  
-                ) {
-                    EmptyView()
-                }
-            }
-            
-            VStack {
-                Button(action: {
-                   
-                }) {
-                    Image("RedBullF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 350, height: 150)
-                }
-                
-                NavigationLink(
-                    destination: RedBullView(Form: $Form),
-                ) {
-                    EmptyView()
-                }
-            }
-            
-            VStack {
-                Button(action: {
-                   
-                }) {
-                    Image("McLarenF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 150)
-                }
-                
-                NavigationLink(
-                    destination: McLarenView(Form: $Form),
-                   
-                ) {
-                    EmptyView() /
-                }
-            }
-            
-            VStack {
-                Button(action: {
-                    
-                }) {
-                    Image("AstonMartinF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 100)
-                }
-                
-                NavigationLink(
-                    destination: AstonMartinView(Form: $Form),
-                    
-                ) {
-                    EmptyView()
-                }
-            }
-            
-            VStack {
-                Button(action: {
-                  
-                }) {
-                    Image("VisaCashAppRBF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 400, height: 250)
-                }
-                
-                NavigationLink(
-                    destination: VisaCashAppView(Form: $Form),
-                 
-                 {
-                    EmptyView()
-                }
-            })
-            
-            VStack {
-                Button(action: {
-                    
-                }) {
-                    Image("HaasF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 400, height: 200)
-                }
-                
-                NavigationLink(
-                    destination: HaasView(Form: $Form),
-              
-                {
-                    EmptyView()
-                }
-            }
-            
-            VStack {
-                Button(action: {
-                    
-                }) {
-                    Image("WilliamsF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 100)
-                }
-                
-                NavigationLink(
-                    destination: WilliamsView(Form: $Form),
-                    
-                 {
-                    EmptyView()
-                }
-            }
-            
-            VStack {
-                Button(action: {
-                    
-                }) {
-                    Image("StakeSauberF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 100)
-                }
-                
-                NavigationLink(
-                    destination: StakeSauber(Form: $Form),
-                    
-                 {
-                    EmptyView()
-                }
-            }
-            
-            VStack {
-                Button(action: {
-                    Form.alpineViewIsActive.toggle()
-                }) {
-                    Image("AlpineF1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 100)
-                }
-                
-                NavigationLink(
-                    destination: AlpineView(Form: $Form),
-                    isActive: $Form.alpineViewIsActive
-                ) {
-                    EmptyView()
-                }
-            }
+            .navigationBarTitle("F1 Teams", displayMode: .inline)
         }
     }
 }
