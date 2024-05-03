@@ -6,12 +6,6 @@ struct TeamData {
 
 struct F1TeamsView: View {
     
-    @State private var mercedesData = TeamData(info: "Mercedes Info")
-    @State private var isMercedesViewActive = false
-    @State private var ferrariData = TeamData(info: "Ferrari Info")
-    @State private var isFerrariViewActive = false
-    @State private var redBullData = TeamData(info: "Red Bull Info")
-    @State private var isRedBullViewActive = false
     
     var body: some View {
         NavigationView {
