@@ -4,7 +4,13 @@ struct ContentView: View {
     @Binding var Form: Information
     
     var body: some View {
+        
         DarkModeSwitch()
+        Spacer()
+        Text("F1 COMPANION APP")
+            .font(.system(size: 80))
+            .fontWeight(.bold)
+        
         NavigationStack{
             VStack{
                 HStack{
