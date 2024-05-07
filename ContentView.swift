@@ -10,7 +10,7 @@ struct ContentView: View {
                 HStack{
                     NavigationLink("F1 Teams") {
                         
-                        F1TeamsView(Form: TeamData)
+                        F1TeamsView(Form: $Form)
                     }
                     Image("Racer")
                 }

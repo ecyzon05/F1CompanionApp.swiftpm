@@ -6,6 +6,7 @@ struct TeamData {
 
 struct F1TeamsView: View {
     
+    @Binding var Form: Information
     
     var body: some View {
         NavigationView {
