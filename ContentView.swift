@@ -12,25 +12,23 @@ struct ContentView: View {
                         
                         F1TeamsView(Form: $Form)
                     }
-                    Image("Racer")
-                }
-                HStack{
-                    NavigationLink("Racetracks") {
-                        
-                        TrackView(Form: $Form)
+                        Image("Racer")
                     }
-                    Image("Race.Track")
-                }
-                HStack{
-                    NavigationLink("Championships Standings") {
-                        
-                        ChampionshipStandingsView(Form: $Form)
+                    HStack{
+                        NavigationLink("Racetracks") {
+                            
+                            TrackView(Form: $Form)
+                        }
+                        Image("Race.Track")
                     }
-                    Image("Standing")
+                    HStack{
+                        NavigationLink("Championships Standings") {
+                            
+                            ChampionshipStandingsView(Form: $Form)
+                        }
+                        Image("Standing")
+                    }
                 }
             }
-            
         }
     }
-    
-}

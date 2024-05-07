@@ -2,7 +2,7 @@ import SwiftUI
 
 struct FerrariView: View {
    
-    var teamData: TeamData
+    
 
     @Binding var Form: Information
     

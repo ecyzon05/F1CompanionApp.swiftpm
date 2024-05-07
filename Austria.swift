@@ -14,5 +14,4 @@ struct AustriaView: View {
             }
         }
     }
-    
 }
