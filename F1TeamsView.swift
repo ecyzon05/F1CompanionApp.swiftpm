@@ -1,5 +1,6 @@
 import SwiftUI
 
+
 struct F1TeamsView: View {
     
     
