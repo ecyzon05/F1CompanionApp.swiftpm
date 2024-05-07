@@ -14,5 +14,5 @@ struct BahrainView: View {
             }
         }
     }
-    
 }
+

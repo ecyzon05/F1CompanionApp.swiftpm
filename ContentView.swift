@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @Binding var Form: Information
     
     var body: some View {
@@ -16,27 +17,29 @@ struct ContentView: View {
                 HStack{
                     NavigationLink("F1 Teams") {
                         
+
                         F1TeamsView(Form: $Form)
+
+                       
+
                     }
-                    Image("Racer")
-                }
-                HStack{
-                    NavigationLink("Racetracks") {
-                        
-                        TrackView(Form: $Form)
+                        Image("Racer")
                     }
-                    Image("Race.Track")
-                }
-                HStack{
-                    NavigationLink("Championships Standings") {
-                        
-                        ChampionshipStandingsView(Form: $Form)
+                    HStack{
+                        NavigationLink("Racetracks") {
+                            
+                            TrackView(Form: $Form)
+                        }
+                        Image("Race.Track")
                     }
-                    Image("Standing")
+                    HStack{
+                        NavigationLink("Championships Standings") {
+                            
+                            ChampionshipStandingsView(Form: $Form)
+                        }
+                        Image("Standing")
+                    }
                 }
             }
-            
         }
     }
-    
-}

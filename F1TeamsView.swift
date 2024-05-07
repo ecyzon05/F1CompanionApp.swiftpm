@@ -1,15 +1,53 @@
 import SwiftUI
 
-struct TeamData {
-    var info: String
-}
 
 struct F1TeamsView: View {
     
-    @Binding var Form: Information
     
+    @Binding var Form: Information
     var body: some View {
-        NavigationView {
+        HStack(spacing: 5) {
+            VStack(spacing: 5) {
+                Button(action: {
+                }) {
+                    Image("MercedesAMGF1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 150)
+                    
+                }
+                
+                Button(action: {
+                }) {
+                    Image("FerrariF1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 200)
+                }
+                
+                Button(action: {
+                }) {
+                    Image("RedBullF1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 350, height: 150)
+                }
+                
+                Button(action: {
+                }) {
+                    Image("McLarenF1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 150)
+                }
+                Button(action: {
+                }) {
+                    Image("AstonMartinF1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 100)
+                }
+            }
             VStack {
                 Button(action: {
                 }) {
@@ -17,7 +55,7 @@ struct F1TeamsView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 400, height: 250)
-                }
+            }
                 Button(action: {
                 }) {
                     Image("HaasF1")
@@ -45,11 +83,8 @@ struct F1TeamsView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 300, height: 100)
-                    }
                 }
             }
-            .navigationBarTitle("F1 Teams", displayMode: .inline)
         }
     }
-
-
+}

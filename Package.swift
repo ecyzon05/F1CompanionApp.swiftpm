@@ -17,7 +17,6 @@ let package = Package(
             name: "F1CompanionApp",
             targets: ["AppModule"],
             bundleIdentifier: "org.jhhs.624088.F1CompanionApp",
-            teamIdentifier: "",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .placeholder(icon: .moon),

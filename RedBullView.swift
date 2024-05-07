@@ -3,7 +3,7 @@ import SwiftUI
 
 struct RedBullView: View {
    
-    var teamData: TeamData
+   
     
     @Binding var Form: Information
     
