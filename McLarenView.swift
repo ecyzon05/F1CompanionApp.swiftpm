@@ -5,13 +5,27 @@ struct McLarenView: View {
    
 
     @Binding var Form: Information
-    
+     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
-            VStack{
-                NavigationLink("Go to McLaren's Team!") {
+        Spacer()
+            .navigationBarBackButtonHidden(true)
+            .toolbar(content: {
+                ToolbarItem (placement: .navigationBarLeading) {
                     
-                    ContentView(Form: $Form)
+                    Button(action: {
+                        presentationMode
+                            .wrappedValue
+                            .dismiss()
+                    }, label: {
+                        Image(systemName: "house")
+                            .foregroundColor(.blue)
+                        Text("Home")
+                            .foregroundColor(.blue)
+                    })
                 }
+            })
+            VStack{
+                Text(":)")
             }
     }
     
