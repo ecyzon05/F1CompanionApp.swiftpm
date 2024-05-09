@@ -8,10 +8,15 @@ struct ContentView: View {
         
         DarkModeSwitch()
         Spacer()
-        Text("F1 COMPANION APP")
-            .font(.system(size: 80))
-            .fontWeight(.bold)
-        
+        HStack{
+            Image("F11")
+                .resizable()
+                .frame(width: 200, height: 140)
+            Text("COMPANION APP")
+                .font(.system(size: 80))
+                .fontWeight(.bold)
+
+        }
         NavigationStack{
             VStack{
                 HStack{
