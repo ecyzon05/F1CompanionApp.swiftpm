@@ -20,7 +20,7 @@ struct ContentView: View {
         NavigationStack{
             VStack{
                 HStack{
-                    NavigationLink("F1 Teams") {
+                    NavigationLink("F1 Teams"){
                         
 
                         F1TeamsView(Form: $Form)
@@ -28,6 +28,7 @@ struct ContentView: View {
                        
 
                     }
+                    .font(.largeTitle)
                         Image("Racer")
                     }
                     HStack{
