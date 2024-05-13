@@ -8,8 +8,7 @@ struct MyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(Form: $Form)
-                .preferredColorScheme(isDarkMode ? .dark : .light)
+            
         }
     }
 }
