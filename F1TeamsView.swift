@@ -15,6 +15,7 @@ struct F1TeamsView: View {
                         .scaledToFit()
                         .frame(width: 300, height: 150)
                     
+                    
                 }
                 
                 Button(action: {
