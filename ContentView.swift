@@ -14,13 +14,13 @@ struct ContentView: View {
                         Text("Companion App")
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(.blue)
+                            .foregroundColor(.black)
                     }
                     
                     NavigationLink(destination: F1TeamsView()) {
                         Text("Formula 1 Teams")
                             .font(.title)
-                            .foregroundColor(.blue)
+                            .foregroundColor(.red)
                             .padding()
                             .multilineTextAlignment(.center) // Align text in the middle horizontally
                     }
@@ -29,7 +29,7 @@ struct ContentView: View {
                     NavigationLink(destination: F1RaceTracks()) {
                         Text("Formula 1 Race Calendar")
                             .font(.title)
-                            .foregroundColor(.blue)
+                            .foregroundColor(.red)
                             .padding()
                             .multilineTextAlignment(.center) // Align text in the middle horizontally
                     }
@@ -38,7 +38,7 @@ struct ContentView: View {
                     NavigationLink(destination: ChampionshipStandingsView()) {
                         Text("Championship Standings")
                             .font(.title)
-                            .foregroundColor(.blue)
+                            .foregroundColor(.red)
                             .padding()
                             .multilineTextAlignment(.center) // Align text in the middle horizontally
                     }
