@@ -49,8 +49,11 @@ struct ContentView: View {
                 }
                 .padding()
                 .navigationBarTitle("", displayMode: .inline) // Remove the default navigation bar title
+                
+                Text("*Made by Taras K, Kacper L, Ryder D and Ethan C*")
             }
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Use compact navigation view style
     }
 }
+
