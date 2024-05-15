@@ -34,14 +34,13 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>import SwiftUI
-</string>
+				<string></string>
 				<key>leading</key>
 				<string></string>
 				<key>trailing</key>
-				<string>
+				<string>import SwiftUI
+
 struct BahrainView: View {
-    
 </string>
 			</dict>
 			<key>type</key>
@@ -77,14 +76,13 @@ struct BahrainView: View {
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>import SwiftUI
-</string>
+				<string></string>
 				<key>leading</key>
 				<string></string>
 				<key>trailing</key>
-				<string>
+				<string>import SwiftUI
+
 struct BahrainView: View {
-    
 </string>
 			</dict>
 			<key>type</key>

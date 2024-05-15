@@ -4,7 +4,6 @@ import SwiftUI
 
 struct ChampionshipStandingsView: View {
     
-    @Binding var Form: Information
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         Spacer()

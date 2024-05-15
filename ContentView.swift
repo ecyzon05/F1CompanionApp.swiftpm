@@ -1,84 +1,56 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedCountry: String?
-    @Binding var form: Information
-    
-    // Define the custom order of F1 tracks
-    let customOrder: [String] = [
-        "Bahrain", "Saudi Arabia", "Australia", "Japan", "China",
-        "Miami", "Emilia-Romagna", "Monaco", "Canada", "Spain",
-        "Austria", "Great Britain", "Hungary", "Belgium", "Netherlands",
-        "Italy", "Azerbaijan", "Singapore", "United States", "Mexico",
-        "Brazil", "Las Vegas", "Qatar", "Abu Dhabi"
-    ]
-    
     var body: some View {
-        TabView {
+        NavigationView {
             VStack {
-                Text("Formula 1 Track Calendar")
-                    .font(.title)
-                    .padding()
-                List(customOrder, id: \.self) { country in
-                    Button(action: {
-                        self.selectedCountry = country
-                    }) {
-                        Text(country)
-                    }
-                }
-            }
-            .popover(item: $selectedCountry) { country in
-                if let circuit = Formula1TrackCalendar.circuits[country] {
-                    VStack {
-                        Text(circuit.trackName)
-                            .font(.title)
-                            .padding()
-                        Image(circuit.imageName)
+                Spacer() // Pushes VStack towards the top
+                
+                VStack(spacing: 20) {
+                    HStack {
+                        Image("F1") // Make sure "F1Logo" is the name of your logo image in the asset catalog
                             .resizable()
-                            .scaledToFit()
-                            .padding()
-                        Button("Return to List", action: {
-                            self.selectedCountry = nil // Dismisses the popover
-                        })
+                            .frame(width: 100, height: 80) // Adjust the size as needed
+                        Text("Companion App")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(.blue)
                     }
+                    
+                    NavigationLink(destination: F1TeamsView()) {
+                        Text("Formula 1 Teams")
+                            .font(.title)
+                            .foregroundColor(.blue)
+                            .padding()
+                            .multilineTextAlignment(.center) // Align text in the middle horizontally
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    NavigationLink(destination: F1RaceTracks()) {
+                        Text("Formula 1 Race Calendar")
+                            .font(.title)
+                            .foregroundColor(.blue)
+                            .padding()
+                            .multilineTextAlignment(.center) // Align text in the middle horizontally
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    NavigationLink(destination: ChampionshipStandingsView()) {
+                        Text("Championship Standings")
+                            .font(.title)
+                            .foregroundColor(.blue)
+                            .padding()
+                            .multilineTextAlignment(.center) // Align text in the middle horizontally
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    Spacer() // Pushes everything upwards
+                    
                 }
-            }
-            .tabItem {
-                Image(systemName: "list.dash")
-                Text("Tracks")
-            }
-            
-            // Second ContentView2
-            ContentView2(form: $form)
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
-                }
-        }
-    }
-}
-
-// Second SwiftUI View
-struct ContentView2: View {
-    @Binding var form: Information
-    
-    var body: some View {
-        DarkModeSwitch()
-        NavigationStack {
-            VStack {
-                // Your content here
+                .padding()
+                .navigationBarTitle("", displayMode: .inline) // Remove the default navigation bar title
             }
         }
-    }
-}
-
-// Conform String to Identifiable
-extension String: Identifiable {
-    public var id: String { self }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(form: .constant(Information()))
+        .navigationViewStyle(StackNavigationViewStyle()) // Use compact navigation view style
     }
 }
