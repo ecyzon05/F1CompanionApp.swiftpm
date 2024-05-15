@@ -38,6 +38,7 @@ struct ContentView: View {
                         }
                         Image("Race.Track")
                     }
+                    .font(.largeTitle)
                     HStack{
                         NavigationLink("Championships Standings") {
                             
@@ -45,6 +46,7 @@ struct ContentView: View {
                         }
                         Image("Standing")
                     }
+                    .font(.largeTitle)
                 }
             }
         }
