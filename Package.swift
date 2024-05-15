@@ -19,8 +19,8 @@ let package = Package(
             bundleIdentifier: "org.jhhs.624088.F1CompanionApp",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .moon),
-            accentColor: .presetColor(.green),
+            appIcon: .asset("AppIcon"),
+            accentColor: .presetColor(.red),
             supportedDeviceFamilies: [
                 .pad,
                 .phone
