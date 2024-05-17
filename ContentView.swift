@@ -23,6 +23,10 @@ struct ContentView: View {
                             .foregroundColor(.red)
                             .padding()
                             .multilineTextAlignment(.center) // Align text in the middle horizontally
+                            .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.red, lineWidth: 2)
+                                    )
                     }
                     .buttonStyle(PlainButtonStyle())
                     
@@ -32,6 +36,10 @@ struct ContentView: View {
                             .foregroundColor(.red)
                             .padding()
                             .multilineTextAlignment(.center) // Align text in the middle horizontally
+                            .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.red, lineWidth: 2)
+                                    )
                     }
                     .buttonStyle(PlainButtonStyle())
                     
@@ -41,6 +49,10 @@ struct ContentView: View {
                             .foregroundColor(.red)
                             .padding()
                             .multilineTextAlignment(.center) // Align text in the middle horizontally
+                            .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .stroke(Color.red, lineWidth: 2)
+                                    )
                     }
                     .buttonStyle(PlainButtonStyle())
                     
