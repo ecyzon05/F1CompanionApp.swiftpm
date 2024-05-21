@@ -14,7 +14,7 @@ struct ContentView: View {
                         Text("Companion App")
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                     }
                     
                     NavigationLink(destination: F1TeamsView()) {
@@ -64,6 +64,13 @@ struct ContentView: View {
                 
                 Text("*Made by Taras K, Kacper L, Ryder D and Ethan C*")
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Image("Chalkk")
+                    .resizable()
+                    .edgesIgnoringSafeArea(.all)
+                )
+
         }
         .navigationViewStyle(StackNavigationViewStyle()) // Use compact navigation view style
     }

@@ -16,7 +16,8 @@ let package = Package(
         .iOSApplication(
             name: "F1CompanionApp",
             targets: ["AppModule"],
-            bundleIdentifier: "org.jhhs.624088.F1CompanionApp",
+            bundleIdentifier: "org.jhhs.625198.F1CompanionApp",
+            teamIdentifier: "LNN9CTYH3M",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .asset("AppIcon"),
