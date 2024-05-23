@@ -77,10 +77,10 @@ struct F1TeamsView: View {
                                 .scaledToFit()
                                 .frame(width: 150, height: 50)
                         }
+                        }
                     }
                 }
                 .padding()
             }
         }
     }
-}

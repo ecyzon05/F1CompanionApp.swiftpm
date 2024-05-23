@@ -5,7 +5,6 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Spacer() // Pushes VStack towards the top
-                
                 VStack(spacing: 20) {
                     HStack {
                         Image("F1") // Make sure "F1Logo" is the name of your logo image in the asset catalog
@@ -62,7 +61,10 @@ struct ContentView: View {
                 .padding()
                 .navigationBarTitle("", displayMode: .inline) // Remove the default navigation bar title
                 
+                Link("Driver Info", destination: URL(string: "https://www.formula1.com/en/drivers")!)
+                
                 Text("*Made by Taras K, Kacper L, Ryder D and Ethan C*")
+                    .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
