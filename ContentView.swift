@@ -69,6 +69,12 @@ struct ContentView: View {
                 }
                 .padding()
                 .navigationBarTitle("", displayMode: .inline) // Remove the default navigation bar title
+                NavigationLink(destination: InfoPage()) {
+                    Text("Info Page")
+                        .font(.title)
+                        .foregroundColor(.red)
+                        .padding()
+                }
                 
                 Link("Driver Info", destination: URL(string: "https://www.formula1.com/en/drivers")!)
                 
